@@ -4,6 +4,7 @@ import Mouse from './MouseTracker/Mouse'
 import MouseHook from './Hook/MouseHook'
 import {ContentHook} from './contentHook/ContentHook'
 import Reducer from './userReducer/Reducer'
+import App from './reduceContext/App'
 
 export {
     User,
@@ -11,5 +12,6 @@ export {
     Mouse,
     MouseHook,
     ContentHook,
-    Reducer
+    Reducer,
+    App
 }

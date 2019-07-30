@@ -6,7 +6,7 @@ const initUser = {
   friends: ['xx', 'yy']
 }
 
-const reducer = (state, action) => {
+const reducer = (state = initUser, action) => {
   switch (action.type) {
     case 'name':
       return {...state, name: action.value}
@@ -18,7 +18,8 @@ const reducer = (state, action) => {
 
 export default function Reducer(props) {
 
-  const [state, dispatch] = useReducer(reducer, initUser)
+  const [state, dispatch] = useReducer(reducer, {})
+  console.log(state)
 
   const handleClickName = e => {
     dispatch({type: 'name', value: 'xxx'})
