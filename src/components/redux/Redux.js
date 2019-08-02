@@ -1,6 +1,6 @@
 /**
  * 使用useContext 与 useReducer 代替 redux
- * 多个reducer 合并
+ * 单个reducer
  */
 import React, { useReducer,useContext, useEffect } from 'react'
 
