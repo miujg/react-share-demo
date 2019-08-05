@@ -4,7 +4,6 @@
  * 自定义combineReducers https://scarletsky.github.io/2016/08/20/write-your-own-combine-reducers-in-redux/
  */
 import React, { useReducer,useContext, useEffect } from 'react'
-// import {combineReducers} from 'redux'
 
 const store = {
    user: {name: 'jgmiu', age: 24},
@@ -42,7 +41,6 @@ const combineReducers = (reducers) => {
 }
 
 const reducers = combineReducers({user, params})
-
 const Context = React.createContext()
 export default function Redux2(props) {
   const [state, dispatch] = useReducer(reducers, store)

@@ -6,6 +6,7 @@ import {ContentHook} from './contentHook/ContentHook'
 import Reducer from './userReducer/Reducer'
 import Redux from './redux/Redux'
 import Redux2 from './redux2/Redux2'
+import Effect from './effect/Effect'
 
 export {
     User,
@@ -15,5 +16,6 @@ export {
     ContentHook,
     Reducer,
     Redux,
-    Redux2
+    Redux2,
+    Effect
 }
