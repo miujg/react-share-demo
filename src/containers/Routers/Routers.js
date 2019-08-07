@@ -3,7 +3,7 @@
 */
 import './routers.scss'
 import {Route, Switch, BrowserRouter as Router, HashRouter} from 'react-router-dom'
-import {User, Mouse, MouseHook, ContentHook, Reducer, Redux, Redux2, Effect} from 'coms'
+import {User, Mouse, MouseHook, ContentHook, Reducer, Redux, Redux2, Effect, State} from 'coms'
 
 export default class Routers extends Component{
   constructor(props) {
@@ -17,6 +17,7 @@ export default class Routers extends Component{
       <div className={'container'}>
         <HashRouter>
           <Switch>
+            <Route path={'/state'} component={State} />
             <Route path={'/effect'} component={Effect} />
             <Route path={'/redux'} component={Redux} />
             <Route path={'/redux2'} component={Redux2} />

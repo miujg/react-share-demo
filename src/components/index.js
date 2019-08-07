@@ -7,6 +7,7 @@ import Reducer from './userReducer/Reducer'
 import Redux from './redux/Redux'
 import Redux2 from './redux2/Redux2'
 import Effect from './effect/Effect'
+import State from './state/State'
 
 export {
     User,
@@ -17,5 +18,6 @@ export {
     Reducer,
     Redux,
     Redux2,
-    Effect
+    Effect,
+    State
 }
