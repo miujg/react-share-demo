@@ -2,7 +2,7 @@
  * useContext的使用
  */
 
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
 
 export const Context = React.createContext()
 

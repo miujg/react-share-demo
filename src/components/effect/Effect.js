@@ -42,10 +42,10 @@ function Child(props) {
   return (
     <div>
       {
-          articles.map((article, i) => {
-            return <span key={i}>{article.content}</span>
-          })
-        }
+        articles.map((article, i) => {
+          return <span key={i}>{article.content}</span>
+        })
+      }
     </div>
   )
 }

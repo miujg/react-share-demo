@@ -3,13 +3,15 @@
  * 多个reducer
  * 自定义combineReducers https://scarletsky.github.io/2016/08/20/write-your-own-combine-reducers-in-redux/
  */
-import React, { useReducer,useContext, useEffect } from 'react'
+import React, { useReducer,useContext } from 'react'
 
+// 创建store
 const store = {
    user: {name: 'jgmiu', age: 24},
    params: {key: 'key', date: '20190802'}
 }
 
+// reducer 创建
 const user = (state, action) => {
   switch (action.type) {
     case 'name':
@@ -20,7 +22,6 @@ const user = (state, action) => {
       return state  
   }
 }
-
 const params = (state, action) => {
   switch (action.type) {
     case 'key':
@@ -32,6 +33,7 @@ const params = (state, action) => {
   }
 }
 
+// 自定义合并reducer函数
 const combineReducers = (reducers) => {
   return function(state, action) {
     return Object.keys(reducers)
@@ -39,10 +41,13 @@ const combineReducers = (reducers) => {
                  .reduce((prev, cur) =>(Object.assign({}, prev, cur)))
   }
 }
-
 const reducers = combineReducers({user, params})
+
+// 创建Context放在最上层父组件
 const Context = React.createContext()
+
 export default function Redux2(props) {
+  // 在最顶层得到 store 与 dispatch
   const [state, dispatch] = useReducer(reducers, store)
 
   return (
